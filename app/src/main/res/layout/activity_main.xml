@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OpenVPN + Payload"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Host / IP"
+        android:textColor="#BBBBBB"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="example.com"
+        android:inputType="textUri"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#666666"
+        android:background="#1E1E1E"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Port"
+        android:textColor="#BBBBBB"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="80"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#666666"
+        android:background="#1E1E1E"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User-Agent"
+        android:textColor="#BBBBBB"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:id="@+id/etUserAgent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mozilla/5.0 ..."
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#666666"
+        android:background="#1E1E1E"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="تشغيل الـ Proxy"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1B5E20"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="إيقاف"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#B71C1C"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="الحالة: موقف"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\nالـ Proxy كيخدم على:\n127.0.0.1:1080"
+        android:textColor="#888888"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
