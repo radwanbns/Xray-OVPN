@@ -1,4 +1,3 @@
-
 pluginManagement {
     repositories {
         google()
@@ -6,17 +5,13 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-
 dependencyResolutionManagement {
-    repositoriesMode.set(
-        RepositoriesMode.FAIL_ON_PROJECT_REPOS
-    )
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
     }
 }
 
-rootProject.name = "Xray-OVPN"
-
+rootProject.name = "OpenVpnPayload"
 include(":app")
