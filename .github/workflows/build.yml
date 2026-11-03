@@ -23,20 +23,19 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-34 build-tools;34.0.0'
 
       - name: Grant execute permission for gradlew
         run: |
           if [ -f "./gradlew" ]; then
             chmod +x ./gradlew
-          else
-            echo "gradlew not found, will use gradle wrapper generation later"
           fi
 
       - name: Build Debug APK
         run: |
-          # Generate gradle wrapper if missing
           if [ ! -f "./gradlew" ]; then
-            gradle wrapper --gradle-version 8.2
+            gradle wrapper --gradle-version 8.7
           fi
           chmod +x ./gradlew
           ./gradlew assembleDebug --stacktrace
@@ -47,3 +46,4 @@ jobs:
           name: OpenVpnPayload-debug
           path: app/build/outputs/apk/debug/*.apk
           retention-days: 7
+          if-no-files-found: warn
